@@ -1,0 +1,83 @@
+.project-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  overflow: hidden; /* Ensure overflow is hidden */
+}
+
+.projects-wrapper {
+  display: flex;
+  transition: transform 0.4s ease;
+}
+
+.project-box {
+  flex: 0 0 30%; /* Ensure each box takes up 30% of the width */
+  margin: 0 10px; /* Add some margin for spacing */
+  height: 350px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 1px 8px 10px 2px rgb(68, 68, 71);
+  overflow: hidden;
+  position: relative;
+}
+
+.btn-primary {
+  font-weight: 500;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: rebeccapurple;
+  color: white;
+  transition: .4s;
+  z-index: 2;
+}
+
+.btn-primary:hover {
+  background-color: rgb(143, 39, 147);
+  color: black;
+}
+
+.project-box label {
+  font-size: 15px;
+  color: black;
+}
+
+.project-box::after {
+  content: "";
+  position: absolute;
+  bottom: -100%;
+  background: aqua;
+  width: 100%;
+  height: 100%;
+  transition: .4s;
+  z-index: 1;
+}
+
+.project-box:hover::after {
+  bottom: 0;
+}
+
+.project-box:hover > h5,
+.project-box:hover > label {
+  color: black;
+  z-index: 2;
+}
+
+.navigation-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 3;
+}
+
+#left-btn {
+  left: 10px; /* Adjust position as needed */
+}
+
+#right-btn {
+  right: 10px; /* Adjust position as needed */
+}
